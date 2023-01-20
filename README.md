@@ -14,14 +14,15 @@ import (
 )
 
 func main() {
-	logger := log.NewLoggerFromEnv() // Reads the LOG environment variable to determine log level
+	// Reads the LOG environment variable to determine log level
+	logger := log.NewLoggerFromEnv()
 
-    // This version would log errors to stderr
-    // logger := log.DefaultLogger
+	// This version would log errors to stderr
+	// logger := log.DefaultLogger
 
-    logger.Debug("This is a debug message")
-    logger.Info("This is an info message")
-    logger.Warn("This is a warning")
+	logger.Debug("This is a debug message")
+	logger.Info("This is an info message")
+	logger.Warn("This is a warning")
 	logger.Errorf("This is an error: %v", errors.New("some error"))
 }
 ```
