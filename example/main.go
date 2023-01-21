@@ -9,6 +9,7 @@ import (
 func main() {
 	logger := log.NewLoggerFromEnv()
 
+	logger.Trace("This is a trace message")
 	logger.Debug("This is a debug message")
 	logger.Info("This is an info message")
 	logger.Warn("This is a warning")
